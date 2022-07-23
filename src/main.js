@@ -1,7 +1,10 @@
 require('dotenv').config()
+const http = require('http')
 const express = require('express')
 const logger = require('morgan')
 const response = require('../src/utils/response')
+const socketio = require('socket.io')
+const WebSockets = require('./utils/WebSockets')
 const mongodb = require('./config/databases')
 const AppModule = require('./app.module')
 
@@ -15,8 +18,15 @@ async function bootstrap() {
     app.use(express.urlencoded({ extended: false }))
     app.use(AppModule)
 
+    // @ Socket Connection
+    const server = http.createServer(app)
+    global.io = socketio.listen(server)
+    global.io.on('connection', WebSockets.connection)
+
     await mongodb((_) => {
-        app.listen(PORT, () => console.log(`Server: http://localhost:${PORT}`))
+        server.listen(PORT, () =>
+            console.log(`Server: http://localhost:${PORT}`)
+        )
     })
 }
 
