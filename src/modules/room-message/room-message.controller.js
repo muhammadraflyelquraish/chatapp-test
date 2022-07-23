@@ -1,7 +1,17 @@
 const RoomMessageService = require('./room-message.service')
+const {
+    sendMessageValidation,
+    roomInitiationValidation,
+} = require('../../validations/room-message.validation')
 
 module.exports.roomInitiation = async (req, res) => {
     try {
+        const validate = roomInitiationValidation(req.body)
+
+        if (!validate.success) {
+            throw new Error(validate.errors.userIds)
+        }
+
         const { userIds } = req.body
         const chatInitiator = req.user._id
         const initiation = await RoomMessageService.roomInitiation(
@@ -62,15 +72,22 @@ module.exports.getMessageByRoomId = async (req, res) => {
 
 module.exports.sendMessage = async (req, res) => {
     try {
-        const roomId = req.params.roomId
-        const { message } = req.body
-        const userId = req.user._id
-        const sendedMessage = await RoomMessageService.sendMessage(
+        const validate = sendMessageValidation(req.body)
+
+        if (!validate.success) {
+            throw new Error(validate.errors.message)
+        }
+
+        const { roomId } = req.params
+        const message = await RoomMessageService.sendMessage(
             roomId,
-            userId,
-            message
+            req.user._id,
+            req.body.message
         )
-        res.success(sendedMessage)
+
+        global.io.sockets.in(roomId).emit('new message', { message })
+
+        res.success(message)
     } catch (error) {
         res.badreq(error?.message)
     }
