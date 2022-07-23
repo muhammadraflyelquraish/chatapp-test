@@ -1,8 +1,21 @@
-const { Sequelize } = require('sequelize')
+const mongoose = require('mongoose')
 
-const connection = new Sequelize({
-    dialect: 'sqlite',
-    storage: '../databases/chatapp.db',
-})
+const connection = async (callback) => {
+    const DB_NAME = process.env.MONGO_DB_NAME || 'chatapp'
+    const DB_HOST = process.env.MONGO_DB_HOST || 'mongodb://localhost:27017'
+
+    await mongoose
+        .connect(DB_HOST.concat('/', DB_NAME), {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        })
+        .then((client) => {
+            console.log('Mongo Connected!')
+            callback(client)
+        })
+        .catch((error) => {
+            console.log(error)
+        })
+}
 
 module.exports = connection
