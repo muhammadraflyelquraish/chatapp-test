@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
 const connection = async (callback) => {
-    const DB_HOST = process.env.MONGO_DB_HOST || 'chatapp'
-    const DB_NAME = process.env.MONGO_DB_NAME || 'mongodb://localhost:27017'
+    const DB_NAME = process.env.MONGO_DB_NAME || 'chatapp'
+    const DB_HOST = process.env.MONGO_DB_HOST || 'mongodb://localhost:27017'
 
     await mongoose
         .connect(DB_HOST.concat('/', DB_NAME), {
