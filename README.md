@@ -53,7 +53,7 @@ This project will do the following
 2. Clone the source with `git`:
 
     ```sh
-    git clone https://github.com/muhammadraflyelquraish/chatapp-assessment.git
+    git clone https://github.com/muhammadraflyelquraish/chatapp-test.git
     ```
 
     ```sh
