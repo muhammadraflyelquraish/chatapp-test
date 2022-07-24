@@ -54,7 +54,6 @@ This project will do the following
 
     ```sh
     git clone https://github.com/muhammadraflyelquraish/chatapp-assessment.git
-    cd chatapp-assessment
     ```
 
     ```sh
