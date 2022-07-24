@@ -54,21 +54,25 @@ This project will do the following
 
     ```sh
     git clone https://github.com/muhammadraflyelquraish/chatapp-assessment.git
+    ```
+
+    ```sh
     cd chatapp-assessment
     ```
 
-3. Configure the build settings:
+3. Configure:
 
     Rename `.env.example` to be `.env`, and customize with your owns
 
 4. Running:
-   If you want to run as development, you can write command:
+
+    If you want to run as development, you can write command:
 
     ```sh
     npm run start:dev
     ```
 
-    But, if you want to run as production, you can write command:
+    If you want to run as production, you can write command:
 
     ```sh
     npm run start
