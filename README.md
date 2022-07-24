@@ -57,7 +57,7 @@ This project will do the following
     ```
 
     ```sh
-    cd chatapp-assessment
+    cd chatapp-test
     ```
 
 3. Configure:
