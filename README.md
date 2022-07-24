@@ -62,6 +62,10 @@ This project will do the following
 
 3. Configure:
 
+    ```sh
+    npm install
+    ```
+
     Rename `.env.example` to be `.env`, and customize with your owns
 
 4. Running:
