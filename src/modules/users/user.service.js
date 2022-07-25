@@ -22,7 +22,13 @@ module.exports.getUserByIds = async (userIds) => {
 
 module.exports.createUser = async (userBody) => {
     const user = await UserModel.create(userBody)
-    return user
+    const { accessToken, refreshToken } = user.generateToken()
+
+    return {
+        ...user._doc,
+        accessToken,
+        refreshToken,
+    }
 }
 
 module.exports.deleteUser = async (userId) => {
