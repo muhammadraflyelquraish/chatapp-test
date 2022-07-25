@@ -7,7 +7,7 @@ But you can _contribute_ to the project or you can use the project for study.**
 
 ## Quick Start
 
-The App build system uses a [nodejs], [express], [mongodb],
+The App build system uses a [node.js], [express], [mongodb],
 
 [nodejs]: hhttps://nodejs.org/en/
 [express]: https://expressjs.com/
@@ -57,7 +57,7 @@ This project will do the following
     ```
 
     ```sh
-    cd chatapp-assessment
+    cd chatapp-test
     ```
 
 3. Configure:
@@ -80,4 +80,10 @@ This project will do the following
 
     ```sh
     npm run start
+    ```
+
+    If you want to run with `docker`, you can write command:
+
+    ```sh
+    docker-compose up -d
     ```

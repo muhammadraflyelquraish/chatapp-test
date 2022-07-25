@@ -2,10 +2,11 @@ const mongoose = require('mongoose')
 
 const connection = async (callback) => {
     const DB_NAME = process.env.MONGO_DB_NAME || 'chatapp'
-    const DB_HOST = process.env.MONGO_DB_HOST || 'mongodb://localhost:27017'
+    const DB_HOST = process.env.MONGO_DB_HOST || 'mongodb://localhost'
+    const DB_PORT = process.env.MONGO_DB_PORT || '27017'
 
     await mongoose
-        .connect(DB_HOST.concat('/', DB_NAME), {
+        .connect(`${DB_HOST}:${DB_PORT}/${DB_NAME}`, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })

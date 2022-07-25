@@ -10,7 +10,7 @@ const AppModule = require('./app.module')
 
 async function bootstrap() {
     const app = express()
-    const PORT = process.env.APP_PORT || 5002
+    const PORT = process.env.APP_PORT || 5003
 
     app.use(logger('dev'))
     app.use(response)

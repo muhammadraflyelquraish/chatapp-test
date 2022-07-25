@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: chatapp_dev
+    image: kuncikoin/chatapp:dev
+    build:
+      context: .
+      target: development
+      dockerfile: ./build/docker/dockerfile
+    command: npm run start
+    environment:
+      - "APP_NAME=${APP_NAME}"
+      - "APP_NODE=${APP_NODE}"
+      - "MONGO_DB_NAME=${MONGO_DB_NAME}"
+      - "MONGO_DB_HOST=mongodb://mongo_kunci"
+      - "MONGO_DB_PORT=27017"
+      - "JWT_SECRET_KEY=${JWT_SECRET_KEY}"
+      - "JWT_EXPIRES_IN=${JWT_EXPIRES_IN}"
+    networks:
+      - kunci_network
+    depends_on:
+      - db
+    restart: unless-stopped
+    ports:
+    - "${APP_PORT}:${APP_PORT}"
+
+  db:
+    image: mongo:latest
+    container_name: mongo_kunci
+    ports:
+      - 5597:27017
+    volumes:
+      - ./build/volumes:/data/db
+    networks:
+      - kunci_network  
+
+networks:
+    kunci_network:
+        name: "kunci_network"
