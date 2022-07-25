@@ -43,13 +43,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/users/309cc626995140cfb5ab63a33ea17d80",
+					"raw": "{{BaseUrlChatApp}}/users/507b6bb5c700498096fbe3edc9cb8cf8",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"users",
-						"309cc626995140cfb5ab63a33ea17d80"
+						"507b6bb5c700498096fbe3edc9cb8cf8"
 					]
 				}
 			},
@@ -62,7 +62,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"name\": \"Mansur\"\r\n}",
+					"raw": "{\r\n    \"name\": \"rafly\",\r\n    \"username\": \"raflyy\",\r\n    \"password\": \"rafly123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -91,13 +91,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/users/309cc626995140cfb5ab63a33ea17d80",
+					"raw": "{{BaseUrlChatApp}}/users/507b6bb5c700498096fbe3edc9cb8cf8",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"users",
-						"309cc626995140cfb5ab63a33ea17d80"
+						"507b6bb5c700498096fbe3edc9cb8cf8"
 					]
 				}
 			},
@@ -109,17 +109,49 @@
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "urlencoded",
-					"urlencoded": []
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"raflyelqrsh\",\r\n    \"password\": \"rafly123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/auth/cd3ece5b1ea444d7929289240431e1b9",
+					"raw": "{{BaseUrlChatApp}}/oauth/login",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
-						"auth",
-						"cd3ece5b1ea444d7929289240431e1b9"
+						"oauth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\" : \"TSTMYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmM2U1M2NmMjNiN2Q0ODQyYjBiMGNlZTMwYmVkNzYxNCIsInVzZXJuYW1lIjoicmFmbHllbHFyc2giLCJpYXQiOjE2NTg3NTY4MzEsImV4cCI6MTY1OTk2NjQzMX0.4RoiNbFb5KuxPD_WsBBonwmYDhkBeWi9JnPHU-pSwC8\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/oauth/refresh",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"oauth",
+						"refresh"
 					]
 				}
 			},
@@ -133,7 +165,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"value": "TSTMYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmM2U1M2NmMjNiN2Q0ODQyYjBiMGNlZTMwYmVkNzYxNCIsInVzZXJuYW1lIjoicmFmbHllbHFyc2giLCJpYXQiOjE2NTg3NTY5MzIsImV4cCI6MTY1ODg0MzMzMn0.GwDcKZ-7-OBNIaEIecZlD_2FMUX9U1UQrZfreeLcyiM",
 							"type": "string"
 						}
 					]
@@ -142,7 +174,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"userIds\": [\"cd3ece5b1ea444d7929289240431e1b9\", \"b7be51dcb52d42849a8862b6f05d918d\"]\r\n}",
+					"raw": "{\r\n    \"userIds\": [\"f3e53cf23b7d4842b0b0cee30bed7614\", \"0f7048e4a95f434891806dd68ce6b1e6\"]\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -170,7 +202,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"value": "TSTMYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmM2U1M2NmMjNiN2Q0ODQyYjBiMGNlZTMwYmVkNzYxNCIsInVzZXJuYW1lIjoicmFmbHllbHFyc2giLCJpYXQiOjE2NTg3NTY5MzIsImV4cCI6MTY1ODg0MzMzMn0.GwDcKZ-7-OBNIaEIecZlD_2FMUX9U1UQrZfreeLcyiM",
 							"type": "string"
 						}
 					]
@@ -182,13 +214,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/room/c4618fed15dc47b7af2d1161a323bb04",
+					"raw": "{{BaseUrlChatApp}}/room/2f4562d781054f0999f8032ffff903a6",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"room",
-						"c4618fed15dc47b7af2d1161a323bb04"
+						"2f4562d781054f0999f8032ffff903a6"
 					]
 				}
 			},
@@ -205,7 +237,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"value": "TSTMYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmM2U1M2NmMjNiN2Q0ODQyYjBiMGNlZTMwYmVkNzYxNCIsInVzZXJuYW1lIjoicmFmbHllbHFyc2giLCJpYXQiOjE2NTg3NTYzMzEsImV4cCI6MTY1ODg0MjczMX0.kwIUkRFoZe2rWXILmOtLR-C3RO0jg57IMqx3zUD_EB0",
 							"type": "string"
 						}
 					]
@@ -241,7 +273,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ODI1ZThjY2ViYmU0ZjJjOTVjODE3MjBkODVhYTVhMiIsInVzZXJuYW1lIjoicmFmbHl5IiwiaWF0IjoxNjU4NzUxMTE3LCJleHAiOjE2NTg4Mzc1MTd9.x2J98AcPpX-MB_aMiQS9wUbfwJO0dHN0fPJNBbkk98c",
 							"type": "string"
 						}
 					]
@@ -253,13 +285,13 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/room/9d25e2738e624c01ae1b66e2cbd677e5/messages",
+					"raw": "{{BaseUrlChatApp}}/room/a37b9a78c7374d4dbd1f9579766e5dd9/messages",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"room",
-						"9d25e2738e624c01ae1b66e2cbd677e5",
+						"a37b9a78c7374d4dbd1f9579766e5dd9",
 						"messages"
 					]
 				}
@@ -274,7 +306,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"value": "TSTMYeyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJmM2U1M2NmMjNiN2Q0ODQyYjBiMGNlZTMwYmVkNzYxNCIsInVzZXJuYW1lIjoicmFmbHllbHFyc2giLCJpYXQiOjE2NTg3NTY5MzIsImV4cCI6MTY1ODg0MzMzMn0.GwDcKZ-7-OBNIaEIecZlD_2FMUX9U1UQrZfreeLcyiM",
 							"type": "string"
 						}
 					]
@@ -283,7 +315,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"message\": \"test\"\r\n}",
+					"raw": "{\r\n    \"message\": \"Hallo juga\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -291,13 +323,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/room/9d25e2738e624c01ae1b66e2cbd677e5/message/send",
+					"raw": "{{BaseUrlChatApp}}/room/b3d4a8c4434a42e4b3fd024df6216118/message/send",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"room",
-						"9d25e2738e624c01ae1b66e2cbd677e5",
+						"b3d4a8c4434a42e4b3fd024df6216118",
 						"message",
 						"send"
 					]
@@ -313,7 +345,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJjZDNlY2U1YjFlYTQ0NGQ3OTI5Mjg5MjQwNDMxZTFiOSIsIm5hbWUiOiJSYWZseSIsImlhdCI6MTY1ODczNDI5MSwiZXhwIjoxNjU4ODIwNjkxfQ.7tMk8Juf0V4wEjMWf1QX4-D_wLp86qiead_Kno5ljZ0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ODI1ZThjY2ViYmU0ZjJjOTVjODE3MjBkODVhYTVhMiIsInVzZXJuYW1lIjoicmFmbHl5IiwiaWF0IjoxNjU4NzUxMTE3LCJleHAiOjE2NTg4Mzc1MTd9.x2J98AcPpX-MB_aMiQS9wUbfwJO0dHN0fPJNBbkk98c",
 							"type": "string"
 						}
 					]
@@ -330,13 +362,13 @@
 					}
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/room/9d25e2738e624c01ae1b66e2cbd677e5/message/mark",
+					"raw": "{{BaseUrlChatApp}}/room/a37b9a78c7374d4dbd1f9579766e5dd9/message/mark",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"room",
-						"9d25e2738e624c01ae1b66e2cbd677e5",
+						"a37b9a78c7374d4dbd1f9579766e5dd9",
 						"message",
 						"mark"
 					]
@@ -352,7 +384,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJjZDNlY2U1YjFlYTQ0NGQ3OTI5Mjg5MjQwNDMxZTFiOSIsIm5hbWUiOiJSYWZseSIsImlhdCI6MTY1ODczNDI5MSwiZXhwIjoxNjU4ODIwNjkxfQ.7tMk8Juf0V4wEjMWf1QX4-D_wLp86qiead_Kno5ljZ0",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ODI1ZThjY2ViYmU0ZjJjOTVjODE3MjBkODVhYTVhMiIsInVzZXJuYW1lIjoicmFmbHl5IiwiaWF0IjoxNjU4NzUxMTE3LCJleHAiOjE2NTg4Mzc1MTd9.x2J98AcPpX-MB_aMiQS9wUbfwJO0dHN0fPJNBbkk98c",
 							"type": "string"
 						}
 					]
@@ -364,14 +396,14 @@
 					"urlencoded": []
 				},
 				"url": {
-					"raw": "{{BaseUrlChatApp}}/room/message/2b3044d0e984464abca39f9e5c0c360e",
+					"raw": "{{BaseUrlChatApp}}/room/message/fe8082bf5cbc4bc7b277355e13ef2c16",
 					"host": [
 						"{{BaseUrlChatApp}}"
 					],
 					"path": [
 						"room",
 						"message",
-						"2b3044d0e984464abca39f9e5c0c360e"
+						"fe8082bf5cbc4bc7b277355e13ef2c16"
 					]
 				}
 			},
