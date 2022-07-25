@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "b3ab857b-e92c-4cf7-a0cb-7ba102243101",
+		"name": "KunciKoin ChatApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12848460"
+	},
+	"item": [
+		{
+			"name": "Get Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/users",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/users/309cc626995140cfb5ab63a33ea17d80",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"users",
+						"309cc626995140cfb5ab63a33ea17d80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Mansur\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/users",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/users/309cc626995140cfb5ab63a33ea17d80",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"users",
+						"309cc626995140cfb5ab63a33ea17d80"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/auth/cd3ece5b1ea444d7929289240431e1b9",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"auth",
+						"cd3ece5b1ea444d7929289240431e1b9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Room Initiation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userIds\": [\"cd3ece5b1ea444d7929289240431e1b9\", \"b7be51dcb52d42849a8862b6f05d918d\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/initiation",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"initiation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Room",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/c4618fed15dc47b7af2d1161a323bb04",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"c4618fed15dc47b7af2d1161a323bb04"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Room With Recent Msg",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/message/recent",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"message",
+						"recent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Message By Room Id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/9d25e2738e624c01ae1b66e2cbd677e5/messages",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"9d25e2738e624c01ae1b66e2cbd677e5",
+						"messages"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJiN2JlNTFkY2I1MmQ0Mjg0OWE4ODYyYjZmMDVkOTE4ZCIsIm5hbWUiOiJNYW5zdXIiLCJpYXQiOjE2NTg3MzQxMTksImV4cCI6MTY1ODgyMDUxOX0.zxBfJ_oDBsr4UoXzNX7MQ6W_pYMh-63oHnLC3Drsawg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"message\": \"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/9d25e2738e624c01ae1b66e2cbd677e5/message/send",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"9d25e2738e624c01ae1b66e2cbd677e5",
+						"message",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mark Read Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJjZDNlY2U1YjFlYTQ0NGQ3OTI5Mjg5MjQwNDMxZTFiOSIsIm5hbWUiOiJSYWZseSIsImlhdCI6MTY1ODczNDI5MSwiZXhwIjoxNjU4ODIwNjkxfQ.7tMk8Juf0V4wEjMWf1QX4-D_wLp86qiead_Kno5ljZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"messageText\": \"Damang Alhamdulillah\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/9d25e2738e624c01ae1b66e2cbd677e5/message/mark",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"9d25e2738e624c01ae1b66e2cbd677e5",
+						"message",
+						"mark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiJjZDNlY2U1YjFlYTQ0NGQ3OTI5Mjg5MjQwNDMxZTFiOSIsIm5hbWUiOiJSYWZseSIsImlhdCI6MTY1ODczNDI5MSwiZXhwIjoxNjU4ODIwNjkxfQ.7tMk8Juf0V4wEjMWf1QX4-D_wLp86qiead_Kno5ljZ0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{BaseUrlChatApp}}/room/message/2b3044d0e984464abca39f9e5c0c360e",
+					"host": [
+						"{{BaseUrlChatApp}}"
+					],
+					"path": [
+						"room",
+						"message",
+						"2b3044d0e984464abca39f9e5c0c360e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
