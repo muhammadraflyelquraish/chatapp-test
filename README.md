@@ -7,10 +7,9 @@ But you can _contribute_ to the project or you can use the project for study.**
 
 ## Quick Start
 
-The App build system uses a [node.js], [express], [mongodb],
+The App build system uses a [nodejs], [mongodb],
 
-[nodejs]: hhttps://nodejs.org/en/
-[express]: https://expressjs.com/
+[nodejs]: https://nodejs.org/en/
 [mongodb]: https://www.mongodb.com/
 
 ### Description
@@ -48,7 +47,8 @@ This project will do the following
 
     - `node.js` stable version
     - `mongodb` local or use `docker`
-    - `mongo compass` GUI for mongodb collection
+    - `mongo compass` GUI for mongodb collection (optional)
+    - `docker` (optional)
 
 2. Clone the source with `git`:
 
@@ -87,3 +87,8 @@ This project will do the following
     ```sh
     docker-compose up -d
     ```
+
+5. Testing:
+
+    If you want to to testing using postman,
+    open folder `test` import filr `chatapp.postman_collection.json`, to postman
