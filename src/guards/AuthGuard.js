@@ -10,13 +10,19 @@ const extractTokenFromHeader = (headers) => {
 
     const token = headerAuth.split(' ')[1]
 
-    return token
+    const prefixToken = process.env.PREFIX_TOKEN
+
+    if (!token.includes(prefixToken)) {
+        throw new Error('Wrong prefix token')
+    }
+
+    return token.replace(process.env.PREFIX_TOKEN, '')
 }
 
 module.exports = async (req, res, next) => {
     try {
         const token = await extractTokenFromHeader(req.headers)
-        const decode = jwt.verify(token, process.env.JWT_SECRET_KEY)
+        const decode = jwt.verify(token, process.env.JWT_ACCESS_TOKEN_KEY)
 
         const user = await AuthService.getUserById(decode._id)
         if (!user) {
